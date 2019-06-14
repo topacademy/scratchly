@@ -4,7 +4,7 @@ function define(Blocks) {
     Blockly.Blocks['enable'] = {
         init: function () {
             this.appendDummyInput()
-                .appendField('Enable MotorShield Objects\n');
+                .appendField('Begin SmartRover\n');
             this.setPreviousStatement(true, null);
             this.setNextStatement(true, null);
             this.setColour(165);
