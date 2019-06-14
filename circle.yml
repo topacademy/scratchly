@@ -1,0 +1,34 @@
+machine:
+  node:
+    version: 6.12.3
+  python:
+    version: 2.7.12
+general:
+  branches:
+    ignore:
+      - wip
+dependencies:
+  pre:
+    - sudo apt-get install g++-arm-linux-gnueabi
+    - npm --global install node-gyp
+  override:
+    - ./tarball-create.sh armv6l
+  cache_directories:
+    - ~/.cache/yarn
+test:
+  override:
+    - echo 'No tests to run'
+deployment:
+  # Dev is the same as production, except we copy to the "dev" folder
+  dev:
+    branch: /.*/
+    commands:
+      - scp edublocks-armv6l.tar.xz Josh@edublocks.org:downloads/dev
+      - cat auto-installer.sh | sed 's/downloads\//downloads\/dev\//g' | ssh Josh@edublocks.org 'cat > downloads/dev/auto-installer.sh'
+      - echo $CIRCLE_TAG | ssh Josh@edublocks.org 'cat > downloads/dev/version.txt'
+  production:
+    tag: /v[0-9]+\.[0-9]+\.[0-9]$/
+    commands:
+      - scp edublocks-armv6l.tar.xz Josh@edublocks.org:downloads
+      - scp auto-installer.sh Josh@edublocks.org:downloads
+      - echo $CIRCLE_TAG | ssh Josh@edublocks.org 'cat > downloads/version.txt'

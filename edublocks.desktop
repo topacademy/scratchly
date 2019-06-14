@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.1.0
+Name=EduBlocks
+Comment=Making the transition from Scratch to Python easier.
+Exec=edublocks
+Icon=/usr/share/icons/hicolor/scalable/apps/logo.png
+Terminal=true
+Type=Application
+Categories=Development
+

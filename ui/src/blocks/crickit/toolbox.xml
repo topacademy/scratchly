@@ -1,0 +1,10 @@
+<category name="Crickit" colour="135">
+  <block type="crickitimport"></block>
+  <block type="crickitinit"></block>
+  <block type="crickitshow"></block>
+  <block type="crickitshowvar"></block>
+  <block type="crickit_d1"></block>
+  <block type="crickit_s1"></block>
+  <block type="crickit_m1"></block>
+  <block type="crickit_m2"></block>
+</category>
