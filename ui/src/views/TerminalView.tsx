@@ -49,7 +49,7 @@ export default class TerminalView extends Component<TerminalViewProps, {}> imple
       }
     });
 
-    this.term.write('\x1b[31mWelcome to EduBlocks!\x1b[m\r\n');
+    this.term.write('\x1b[31mWelcome to Scratchly!\x1b[m\r\n');
     this.term.write('Press [ESC] to exit the terminal\r\n');
 
     this.fit();

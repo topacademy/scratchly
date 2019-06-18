@@ -97,5 +97,5 @@ app.ws('/terminal', (ws, req) => {
 });
 app.use(express.static(ui));
 app.listen(8081, () => {
-    console.log('EduBlocks server now listening on port 8081!');
+    console.log('Scratchly server now listening on port 8081!');
 });

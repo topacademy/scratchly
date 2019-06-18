@@ -43,7 +43,7 @@ var TerminalView = (function (_super) {
                 _this.props.onClose();
             }
         });
-        this.term.write('\x1b[31mWelcome to EduBlocks!\x1b[m\r\n');
+        this.term.write('\x1b[31mWelcome to Scratchly!\x1b[m\r\n');
         this.term.write('Press [ESC] to exit the terminal\r\n');
         this.fit();
         window.addEventListener('resize', function () { return _this.fit(); });

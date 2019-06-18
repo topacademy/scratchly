@@ -22,7 +22,7 @@ var Nav = (function (_super) {
         return (React.createElement("nav", null,
             React.createElement("a", { class: 'brand' },
                 React.createElement("img", { class: 'logo', src: '/images/logo.png' }),
-                React.createElement("span", null, "EduBlocks")),
+                React.createElement("span", null, "Scratchly")),
             React.createElement("input", { id: 'bmenub', type: 'checkbox', class: 'show' }),
             React.createElement("label", { for: 'bmenub', class: 'burger pseudo button' }, "menu"),
             React.createElement("div", { class: 'menu' },

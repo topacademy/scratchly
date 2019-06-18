@@ -5048,7 +5048,7 @@ var Nav = (function (_super) {
         return (React.createElement("nav", null,
             React.createElement("a", { class: 'brand' },
                 React.createElement("img", { class: 'logo', src: '/images/logo.png' }),
-                React.createElement("span", null, "EduBlocks")),
+                React.createElement("span", null, "Scratchly")),
             React.createElement("input", { id: 'bmenub', type: 'checkbox', class: 'show' }),
             React.createElement("label", { for: 'bmenub', class: 'burger pseudo button' }, "menu"),
             React.createElement("div", { class: 'menu' },
@@ -5461,7 +5461,7 @@ var TerminalView = (function (_super) {
                 _this.props.onClose();
             }
         });
-        this.term.write('\x1b[31mWelcome to EduBlocks!\x1b[m\r\n');
+        this.term.write('\x1b[31mWelcome to Scratchly!\x1b[m\r\n');
         this.term.write('Press [ESC] to exit the terminal\r\n');
         this.fit();
         window.addEventListener('resize', function () { return _this.fit(); });
