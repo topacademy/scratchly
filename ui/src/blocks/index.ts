@@ -11,6 +11,12 @@ basicDefs(Blockly.Blocks);
 basicGens(Blockly.Python as any);
 toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'basic', 'toolbox.xml'));
 
+import edisonDefs from './edison/definitions';
+import edisonGens from './edison/generators';
+edisonDefs(Blockly.Blocks);
+edisonGens(Blockly.Python as any);
+toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'edison', 'toolbox.xml'));
+
 import minecraftDefs from './minecraft/definitions';
 import minecraftGens from './minecraft/generators';
 minecraftDefs(Blockly.Blocks);
@@ -64,12 +70,6 @@ import crickitGens from './crickit/generators';
 crickitDefs(Blockly.Blocks);
 crickitGens(Blockly.Python as any);
 toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'crickit', 'toolbox.xml'));
-
-import smartroverDefs from './smartrover/definitions';
-import smartroverGens from './smartrover/generators';
-smartroverDefs(Blockly.Blocks);
-smartroverGens(Blockly.Python as any);
-toolBoxXml += fs.readFileSync(path.join(__dirname, '..', '..', 'src', 'blocks', 'smartrover', 'toolbox.xml'));
 
 toolBoxXml += '</xml>';
 

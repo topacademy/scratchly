@@ -1139,6 +1139,442 @@ exports.default = define;
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Blocks) {
+    Blockly.Blocks['enable'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Begin Edison\n');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Enable MotorShield with this block at the start');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow1_on'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(1).on()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 1 on');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow1_off'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(1).off()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 1 off');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow2_on'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(2).on()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 2 on');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow2_off'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(2).off()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 2 off');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow3_on'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(3).on()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 3 on');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow3_off'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(3).off()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 3 off');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow4_on'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(4).on()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 4 on');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['arrow4_off'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Arrow(4).off()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Sets Arrow 4 off');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['sonicCheck'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Check Ultrasonic Sensor');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Check Ultrasonic Sensor');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['ls1Check'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Check Line Sensor 1');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Check IR1 Line Sensor');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['ls2Check'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Check Line Sensor 2');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Check IR2 Line Sensor');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['m1Forwardx'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('m1.forward(')
+                .appendField(new Blockly.FieldTextInput('60'), 'm1ForwardSpeed')
+                .appendField(')');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Set forward speed for motor 1');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['m1Reversex'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('m1.reverse(')
+                .appendField(new Blockly.FieldTextInput('50'), 'm1ReverseSpeed')
+                .appendField(')');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Set reverse speed for motor 1');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['m1Stop'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Motor1 Stop');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Motor1 Stop');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['m2Forwardx'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('m2.forward(')
+                .appendField(new Blockly.FieldTextInput('60'), 'm2ForwardSpeed')
+                .appendField(')');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Set forward speed for motor 2');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['m2Reversex'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('m2.reverse(')
+                .appendField(new Blockly.FieldTextInput('50'), 'm2ReverseSpeed')
+                .appendField(')');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Set reverse speed for motor 2');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['m2Stop'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('Motor2 Stop');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Motor2 Stop');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['both_onWhiteLine'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('if')
+                .appendField(new Blockly.FieldTextInput('ls1.Triggered == False and ls2.Triggered == False'), 'var')
+                .appendField(':');
+            this.appendStatementInput('DO')
+                .appendField('');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('If Statement.');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['ls1_onBlackLine'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('elif')
+                .appendField(new Blockly.FieldTextInput('ls1.Triggered == True and ls2.Triggered == False'), 'var')
+                .appendField(':');
+            this.appendStatementInput('DO')
+                .appendField('');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Elif Statement.');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['ls2_onBlackLine'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('elif')
+                .appendField(new Blockly.FieldTextInput('ls1.Triggered == False and ls2.Triggered == True'), 'var')
+                .appendField(':');
+            this.appendStatementInput('DO')
+                .appendField('');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(165);
+            this.setTooltip('Elif Statement.');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['try'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('try:');
+            this.appendStatementInput('DO')
+                .appendField('');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(336);
+            this.setTooltip('try loop.');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['except'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('except KeyboardInterrupt:');
+            this.appendStatementInput('DO')
+                .appendField('');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(336);
+            this.setTooltip('except Keyboard interrupt');
+            this.setHelpUrl('');
+        },
+    };
+    Blockly.Blocks['GPIO cleanup'] = {
+        init: function () {
+            this.appendDummyInput()
+                .appendField('GPIO.cleanup()');
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(336);
+            this.setTooltip('GPIO Cleanup');
+            this.setHelpUrl('');
+        },
+    };
+}
+exports.default = define;
+
+},{}],11:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function define(Python) {
+    Python['enable'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var mpath = 'import sys\n' + 'sys.path.append("/home/pi/MotorShield")\n';
+        var aimport = 'from PiMotor import Arrow\n';
+        var simport = 'from PiMotor import Sensor\n';
+        var mimport = 'from PiMotor import Motor\n';
+        var m1obj = 'm1 = Motor("MOTOR1",1)\n';
+        var m2obj = 'm2 = Motor("MOTOR2",1)\n';
+        var m3obj = 'm3 = Motor("MOTOR3",1)\n';
+        var m4obj = 'm4 = Motor("MOTOR4",1)\n';
+        var usobj = 'us = Sensor("ULTRASONIC", 10)\n';
+        var ir1obj = 'ls1 = Sensor("IR1", 0)\n';
+        var ir2obj = 'ls2 = Sensor("IR2", 0)\n';
+        var code = mpath + aimport + simport + mimport + m1obj + m2obj + m3obj + m4obj + usobj + ir1obj + ir2obj;
+        return code;
+    };
+    Python['arrow1_on'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(1).on()\n';
+        return code;
+    };
+    Python['arrow1_off'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(1).off()\n';
+        return code;
+    };
+    Python['arrow2_on'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(2).on()\n';
+        return code;
+    };
+    Python['arrow2_off'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(2).off()\n';
+        return code;
+    };
+    Python['arrow3_on'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(3).on()\n';
+        return code;
+    };
+    Python['arrow3_off'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(3).off()\n';
+        return code;
+    };
+    Python['arrow4_on'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(4).on()\n';
+        return code;
+    };
+    Python['arrow4_off'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'Arrow(4).off()\n';
+        return code;
+    };
+    Python['sonicCheck'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'us.sonicCheck()\n';
+        return code;
+    };
+    Python['ls1Check'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'ls1.iRCheck()\n';
+        return code;
+    };
+    Python['ls2Check'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'ls2.iRCheck()\n';
+        return code;
+    };
+    Python['m1Forwardx'] = function (block) {
+        var text_m1ForwardSpeed = block.getFieldValue('m1ForwardSpeed');
+        var code = 'm1.forward(' + text_m1ForwardSpeed + ')\n';
+        return code;
+    };
+    Python['m1Reversex'] = function (block) {
+        var text_m1ReverseSpeed = block.getFieldValue('m1ReverseSpeed');
+        var code = 'm1.reverse(' + text_m1ReverseSpeed + ')\n';
+        return code;
+    };
+    Python['m1Stop'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'm1.stop()\n';
+        return code;
+    };
+    Python['m2Forwardx'] = function (block) {
+        var text_m2ForwardSpeed = block.getFieldValue('m2ForwardSpeed');
+        var code = 'm2.forward(' + text_m2ForwardSpeed + ')\n';
+        return code;
+    };
+    Python['m2Reversex'] = function (block) {
+        var text_m2ReverseSpeed = block.getFieldValue('m2ReverseSpeed');
+        var code = 'm2.reverse(' + text_m2ReverseSpeed + ')\n';
+        return code;
+    };
+    Python['m2Stop'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'm2.stop()\n';
+        return code;
+    };
+    Python['both_onWhiteLine'] = function (block) {
+        var text_const = block.getFieldValue('var');
+        var branch = Blockly.Python.statementToCode(block, 'DO');
+        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
+        return 'if ' + text_const + ':\n' + branch;
+    };
+    Python['ls1_onBlackLine'] = function (block) {
+        var text_const = block.getFieldValue('var');
+        var branch = Blockly.Python.statementToCode(block, 'DO');
+        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
+        return 'elif ' + text_const + ':\n' + branch;
+    };
+    Python['ls2_onBlackLine'] = function (block) {
+        var text_const = block.getFieldValue('var');
+        var branch = Blockly.Python.statementToCode(block, 'DO');
+        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
+        return 'elif ' + text_const + ':\n' + branch;
+    };
+    Python['try'] = function (block) {
+        var branch = Blockly.Python.statementToCode(block, 'DO');
+        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
+        return 'try:\n' + branch;
+    };
+    Python['except'] = function (block) {
+        var branch = Blockly.Python.statementToCode(block, 'DO');
+        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
+        return 'except KeyboardInterrupt:\n' + branch;
+    };
+    Python['GPIO cleanup'] = function (block) {
+        // TODO: Assemble Python into code variable.
+        var code = 'GPIO.cleanup()\n';
+        return code;
+    };
+}
+exports.default = define;
+
+},{}],12:[function(require,module,exports){
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function define(Blocks) {
     Blocks['importgpiozero'] = {
         init: function () {
             this.appendDummyInput()
@@ -2034,7 +2470,7 @@ function define(Blocks) {
 }
 exports.default = define;
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Python) {
@@ -2495,7 +2931,7 @@ function define(Python) {
 }
 exports.default = define;
 
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 (function (Buffer){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -2508,56 +2944,56 @@ var generators_1 = require("./basic/generators");
 definitions_1.default(Blockly.Blocks);
 generators_1.default(Blockly.Python);
 toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkJhc2ljIiBjb2xvdXI9IjMzNiI+CiAgPGJsb2NrIHR5cGU9InJhbmRvbSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0id2hpbGVfdHJ1ZSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0icGFzcyI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iaWYiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InZhcnByaW50Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJkZWZjYWxsIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJpZmNyb2MiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InZhcm1pbnVzIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJ2YXJwbHVzIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJpbXBvcnRfc2lnbmFsIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJpbXBvcnRfY29sb3JzeXMiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InBhdXNlX3MiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImZvciI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iYWR2YW5jZWRmb3Jsb29wcyI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iaWZlcXVhbHMiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImltcG9ydGlucHV0cyI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0icmV0dXJuMiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iZWxpZiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iZWxzZSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iZGYiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9IndoaWxlb3V0Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJ0aW1lIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJpbXBvcnRfbWF0aCI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ic2xlZXAiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InByaW50Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJlcXVhbHNibG9jayI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iZGVmaW5lIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJncmVhdGVyIj48L2Jsb2NrPgo8L2NhdGVnb3J5Pgo=","base64");
-var definitions_2 = require("./minecraft/definitions");
-var generators_2 = require("./minecraft/generators");
+var definitions_2 = require("./edison/definitions");
+var generators_2 = require("./edison/generators");
 definitions_2.default(Blockly.Blocks);
 generators_2.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9Ik1pbmVjcmFmdCIgY29sb3VyPSIxMjAiPgogIDxjYXRlZ29yeSBuYW1lPSJHZW5lcmFsIiBjb2xvdXI9IjI3MCI+CiAgICA8YmxvY2sgdHlwZT0ibWNpbXBvcnQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0X2Jsb2NrIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jcGlibG9ja2FzIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jY3JlYXRlIj48L2Jsb2NrPgogIDwvY2F0ZWdvcnk+CiAgPGNhdGVnb3J5IG5hbWU9IkNvbW1hbmRzIiBjb2xvdXI9IjEyMCI+CiAgICA8YmxvY2sgdHlwZT0ibWNwb3N0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jcG9zIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9InNldHBvcyI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJjYW1wb3MiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZ2V0YmxvY2siPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iY2FtZXJhc2V0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9InNldGJsb2NrIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jdmFyIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jdGV4dCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJtY2Jsb2NrcyI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJidWlsZCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJwcmludHdhbGwiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0ibWN0ZXh0MiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJtY3RleHQ1Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jYmxvY2tzOCI+PC9ibG9jaz4KCiAgICA8YmxvY2sgdHlwZT0icmV0dXJuIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImdldGRpc3QiPjwvYmxvY2s+CiAgPC9jYXRlZ29yeT4KPC9jYXRlZ29yeT4K","base64");
-var definitions_3 = require("./gpiozero/definitions");
-var generators_3 = require("./gpiozero/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkVkaXNvbiIgY29sb3VyPSIxNjUiPgogIDxibG9jayB0eXBlPSJlbmFibGUiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImFycm93MV9vbiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iYXJyb3cxX29mZiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iYXJyb3cyX29uIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJhcnJvdzJfb2ZmIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJhcnJvdzNfb24iPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImFycm93M19vZmYiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImFycm93NF9vbiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iYXJyb3c0X29mZiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ic29uaWNDaGVjayI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ibHMxQ2hlY2siPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImxzMkNoZWNrIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJtMUZvcndhcmR4Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJtMVJldmVyc2V4Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJtMVN0b3AiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9Im0yRm9yd2FyZHgiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9Im0yUmV2ZXJzZXgiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9Im0yU3RvcCI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iYm90aF9vbldoaXRlTGluZSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ibHMxX29uQmxhY2tMaW5lIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJsczJfb25CbGFja0xpbmUiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InRyeSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iZXhjZXB0Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJHUElPIGNsZWFudXAiPjwvYmxvY2s+CjwvY2F0ZWdvcnk+Cgo=","base64");
+var definitions_3 = require("./minecraft/definitions");
+var generators_3 = require("./minecraft/generators");
 definitions_3.default(Blockly.Blocks);
 generators_3.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9ImdwaW96ZXJvIiBjb2xvdXI9IjYwIj4KICA8Y2F0ZWdvcnkgbmFtZT0iR2VuZXJhbCIgY29sb3VyPSI2MCI+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0Z3Bpb3plcm8iPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0dGltZSI+PC9ibG9jaz4KICA8L2NhdGVnb3J5PgogIDxjYXRlZ29yeSBuYW1lPSJJbnB1dHMiIGNvbG91cj0iMTk2Ij4KICAgIDxjYXRlZ29yeSBuYW1lPSJCdXR0b24iIGNvbG91cj0iMTk2Ij4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbnNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbmFjdGlvbiI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbnZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTGluZSBTZW5zb3IiIGNvbG91cj0iMTk2Ij4KICAgICAgPGJsb2NrIHR5cGU9ImxpbmVzZXQiPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJsaW5lYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGluZXZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTW90aW9uIFNlbnNvciIgY29sb3VyPSIxOTYiPgogICAgICA8YmxvY2sgdHlwZT0ibW90aW9uc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibW90aW9uYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibW90aW9udmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJMaWdodCBTZW5zb3IiIGNvbG91cj0iMTk2Ij4KICAgICAgPGJsb2NrIHR5cGU9ImxpZ2h0c2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGlnaHRhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJsaWdodHZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iRGlzdGFuY2UgU2Vuc29yIiBjb2xvdXI9IjE5NiI+CiAgICAgIDxibG9jayB0eXBlPSJkaXN0YW5jZXNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImRpc3RhbmNlYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZGlzdGFuY2V2YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogIDwvY2F0ZWdvcnk+CiAgPGNhdGVnb3J5IG5hbWU9Ik91dHB1dHMiIGNvbG91cj0iMCI+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTEVEIiBjb2xvdXI9IjAiPgogICAgICA8YmxvY2sgdHlwZT0ibGVkc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGVkYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGVkdmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJQV01MRUQiIGNvbG91cj0iMCI+CiAgICAgIDxibG9jayB0eXBlPSJwbGVkc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0icGxlZGFjdGlvbiI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InBsZWR2YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogICAgPGNhdGVnb3J5IG5hbWU9IlJHQkxFRCIgY29sb3VyPSIwIj4KICAgICAgPGJsb2NrIHR5cGU9InJnYmxlZHNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InJnYmxlZGFjdGlvbiI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InJnYmxlZHZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iQnV6emVyIiBjb2xvdXI9IjAiPgogICAgICA8YmxvY2sgdHlwZT0iYnV6emVyc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iYnV6emVyYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iYnV6emVydmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJNb3RvciIgY29sb3VyPSIwIj4KICAgICAgPGJsb2NrIHR5cGU9Im1vdG9yc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibW90b3JhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJtb3RvcnZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iU2Vydm8iIGNvbG91cj0iMCI+CiAgICAgIDxibG9jayB0eXBlPSJzZXJ2b3NldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InNlcnZvYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ic2Vydm92YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogICAgPGNhdGVnb3J5IG5hbWU9IkFuZ3VsYXIgU2Vydm8iIGNvbG91cj0iMCI+CiAgICAgIDxibG9jayB0eXBlPSJhbmdzZXQiPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJhbmdhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJhbmd2YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogIDwvY2F0ZWdvcnk+CiAgPGNhdGVnb3J5IG5hbWU9IkJvYXJkcyAmYW1wOyBBY2Nlc3NvcmllcyIgY29sb3VyPSI0NSI+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTEVEQm9hcmQiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0ibGVkYnNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImxlZGJhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJsZWRidmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJMRUQgQmFyIEdyYXBoIiBjb2xvdXI9IjQ1Ij4KICAgICAgPGJsb2NrIHR5cGU9ImdyYXBoc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZ3JhcGhhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJncmFwaHZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iQnV0dG9uIEJvYXJkIiBjb2xvdXI9IjQ1Ij4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbmJzZXQiPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJidXR0b25iYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iYnV0dG9uYnZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iVHJhZmZpYyBMaWdodHMiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0idHJhZmZpY3NldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InRyYWZmaWNhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJ0cmFmZmljdmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJFbmVyZ2VuaWUiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0iZW5lcmdlbmllc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZW5lcmdlbmllYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZW5lcmdlbmlldmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJDYW1KYW0gS2l0IDMgUm9ib3QiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0iY2FtamFtc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iY2FtamFtYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iY2FtamFtdmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICA8L2NhdGVnb3J5PgogIDxjYXRlZ29yeSBuYW1lPSJJbnRlcm5hbCAmYW1wOyBTUEkgRGV2aWNlcyIgY29sb3VyPSIxNTAiPgogICAgPGNhdGVnb3J5IG5hbWU9IlRpbWUgT2YgRGF5IiBjb2xvdXI9IjE1MCI+CiAgICAgIDxibG9jayB0eXBlPSJ0aW1lc2V0Ij48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJQaW5nIFNlcnZlciIgY29sb3VyPSIxNTAiPgogICAgICA8YmxvY2sgdHlwZT0icGluZ3NldCI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iQ1BVIFRlbXBlcmF0dXJlIiBjb2xvdXI9IjE1MCI+CiAgICAgIDxibG9jayB0eXBlPSJjcHVzZXQiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogICAgPGNhdGVnb3J5IG5hbWU9IkFuYWxvZ3VlIHRvIERpZ2l0YWwiIGNvbG91cj0iMTUwIj4KICAgICAgPGJsb2NrIHR5cGU9ImFkYyI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgPC9jYXRlZ29yeT4KPC9jYXRlZ29yeT4K","base64");
-var definitions_4 = require("./sonicpi/definitions");
-var generators_4 = require("./sonicpi/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9Ik1pbmVjcmFmdCIgY29sb3VyPSIxMjAiPgogIDxjYXRlZ29yeSBuYW1lPSJHZW5lcmFsIiBjb2xvdXI9IjI3MCI+CiAgICA8YmxvY2sgdHlwZT0ibWNpbXBvcnQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0X2Jsb2NrIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jcGlibG9ja2FzIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jY3JlYXRlIj48L2Jsb2NrPgogIDwvY2F0ZWdvcnk+CiAgPGNhdGVnb3J5IG5hbWU9IkNvbW1hbmRzIiBjb2xvdXI9IjEyMCI+CiAgICA8YmxvY2sgdHlwZT0ibWNwb3N0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jcG9zIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9InNldHBvcyI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJjYW1wb3MiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZ2V0YmxvY2siPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iY2FtZXJhc2V0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9InNldGJsb2NrIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jdmFyIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jdGV4dCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJtY2Jsb2NrcyI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJidWlsZCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJwcmludHdhbGwiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0ibWN0ZXh0MiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJtY3RleHQ1Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Im1jYmxvY2tzOCI+PC9ibG9jaz4KCiAgICA8YmxvY2sgdHlwZT0icmV0dXJuIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImdldGRpc3QiPjwvYmxvY2s+CiAgPC9jYXRlZ29yeT4KPC9jYXRlZ29yeT4K","base64");
+var definitions_4 = require("./gpiozero/definitions");
+var generators_4 = require("./gpiozero/generators");
 definitions_4.default(Blockly.Blocks);
 generators_4.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlNvbmljIFBpIiBjb2xvdXI9IjE4MCI+CiAgPGJsb2NrIHR5cGU9ImltcG9ydF9zb25pYyI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ic2FtcGxlc29uIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJwbGF5Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJzbGVlcDEiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImxpdmVsb29wIj48L2Jsb2NrPgo8L2NhdGVnb3J5Pg==","base64");
-var definitions_5 = require("./pimoroni/definitions");
-var generators_5 = require("./pimoroni/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9ImdwaW96ZXJvIiBjb2xvdXI9IjYwIj4KICA8Y2F0ZWdvcnkgbmFtZT0iR2VuZXJhbCIgY29sb3VyPSI2MCI+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0Z3Bpb3plcm8iPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0dGltZSI+PC9ibG9jaz4KICA8L2NhdGVnb3J5PgogIDxjYXRlZ29yeSBuYW1lPSJJbnB1dHMiIGNvbG91cj0iMTk2Ij4KICAgIDxjYXRlZ29yeSBuYW1lPSJCdXR0b24iIGNvbG91cj0iMTk2Ij4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbnNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbmFjdGlvbiI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbnZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTGluZSBTZW5zb3IiIGNvbG91cj0iMTk2Ij4KICAgICAgPGJsb2NrIHR5cGU9ImxpbmVzZXQiPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJsaW5lYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGluZXZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTW90aW9uIFNlbnNvciIgY29sb3VyPSIxOTYiPgogICAgICA8YmxvY2sgdHlwZT0ibW90aW9uc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibW90aW9uYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibW90aW9udmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJMaWdodCBTZW5zb3IiIGNvbG91cj0iMTk2Ij4KICAgICAgPGJsb2NrIHR5cGU9ImxpZ2h0c2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGlnaHRhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJsaWdodHZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iRGlzdGFuY2UgU2Vuc29yIiBjb2xvdXI9IjE5NiI+CiAgICAgIDxibG9jayB0eXBlPSJkaXN0YW5jZXNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImRpc3RhbmNlYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZGlzdGFuY2V2YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogIDwvY2F0ZWdvcnk+CiAgPGNhdGVnb3J5IG5hbWU9Ik91dHB1dHMiIGNvbG91cj0iMCI+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTEVEIiBjb2xvdXI9IjAiPgogICAgICA8YmxvY2sgdHlwZT0ibGVkc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGVkYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibGVkdmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJQV01MRUQiIGNvbG91cj0iMCI+CiAgICAgIDxibG9jayB0eXBlPSJwbGVkc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0icGxlZGFjdGlvbiI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InBsZWR2YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogICAgPGNhdGVnb3J5IG5hbWU9IlJHQkxFRCIgY29sb3VyPSIwIj4KICAgICAgPGJsb2NrIHR5cGU9InJnYmxlZHNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InJnYmxlZGFjdGlvbiI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InJnYmxlZHZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iQnV6emVyIiBjb2xvdXI9IjAiPgogICAgICA8YmxvY2sgdHlwZT0iYnV6emVyc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iYnV6emVyYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iYnV6emVydmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJNb3RvciIgY29sb3VyPSIwIj4KICAgICAgPGJsb2NrIHR5cGU9Im1vdG9yc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ibW90b3JhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJtb3RvcnZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iU2Vydm8iIGNvbG91cj0iMCI+CiAgICAgIDxibG9jayB0eXBlPSJzZXJ2b3NldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InNlcnZvYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0ic2Vydm92YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogICAgPGNhdGVnb3J5IG5hbWU9IkFuZ3VsYXIgU2Vydm8iIGNvbG91cj0iMCI+CiAgICAgIDxibG9jayB0eXBlPSJhbmdzZXQiPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJhbmdhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJhbmd2YXIiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogIDwvY2F0ZWdvcnk+CiAgPGNhdGVnb3J5IG5hbWU9IkJvYXJkcyAmYW1wOyBBY2Nlc3NvcmllcyIgY29sb3VyPSI0NSI+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iTEVEQm9hcmQiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0ibGVkYnNldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9ImxlZGJhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJsZWRidmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJMRUQgQmFyIEdyYXBoIiBjb2xvdXI9IjQ1Ij4KICAgICAgPGJsb2NrIHR5cGU9ImdyYXBoc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZ3JhcGhhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJncmFwaHZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iQnV0dG9uIEJvYXJkIiBjb2xvdXI9IjQ1Ij4KICAgICAgPGJsb2NrIHR5cGU9ImJ1dHRvbmJzZXQiPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJidXR0b25iYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iYnV0dG9uYnZhciI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iVHJhZmZpYyBMaWdodHMiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0idHJhZmZpY3NldCI+PC9ibG9jaz4KICAgICAgPGJsb2NrIHR5cGU9InRyYWZmaWNhY3Rpb24iPjwvYmxvY2s+CiAgICAgIDxibG9jayB0eXBlPSJ0cmFmZmljdmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJFbmVyZ2VuaWUiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0iZW5lcmdlbmllc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZW5lcmdlbmllYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iZW5lcmdlbmlldmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJDYW1KYW0gS2l0IDMgUm9ib3QiIGNvbG91cj0iNDUiPgogICAgICA8YmxvY2sgdHlwZT0iY2FtamFtc2V0Ij48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iY2FtamFtYWN0aW9uIj48L2Jsb2NrPgogICAgICA8YmxvY2sgdHlwZT0iY2FtamFtdmFyIj48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICA8L2NhdGVnb3J5PgogIDxjYXRlZ29yeSBuYW1lPSJJbnRlcm5hbCAmYW1wOyBTUEkgRGV2aWNlcyIgY29sb3VyPSIxNTAiPgogICAgPGNhdGVnb3J5IG5hbWU9IlRpbWUgT2YgRGF5IiBjb2xvdXI9IjE1MCI+CiAgICAgIDxibG9jayB0eXBlPSJ0aW1lc2V0Ij48L2Jsb2NrPgogICAgPC9jYXRlZ29yeT4KICAgIDxjYXRlZ29yeSBuYW1lPSJQaW5nIFNlcnZlciIgY29sb3VyPSIxNTAiPgogICAgICA8YmxvY2sgdHlwZT0icGluZ3NldCI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgICA8Y2F0ZWdvcnkgbmFtZT0iQ1BVIFRlbXBlcmF0dXJlIiBjb2xvdXI9IjE1MCI+CiAgICAgIDxibG9jayB0eXBlPSJjcHVzZXQiPjwvYmxvY2s+CiAgICA8L2NhdGVnb3J5PgogICAgPGNhdGVnb3J5IG5hbWU9IkFuYWxvZ3VlIHRvIERpZ2l0YWwiIGNvbG91cj0iMTUwIj4KICAgICAgPGJsb2NrIHR5cGU9ImFkYyI+PC9ibG9jaz4KICAgIDwvY2F0ZWdvcnk+CiAgPC9jYXRlZ29yeT4KPC9jYXRlZ29yeT4K","base64");
+var definitions_5 = require("./sonicpi/definitions");
+var generators_5 = require("./sonicpi/generators");
 definitions_5.default(Blockly.Blocks);
 generators_5.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlBpbW9yb25pIiBjb2xvdXI9Ijg0MyI+IAogIDxjYXRlZ29yeSBuYW1lPSJFeHBsb3JlciBIYXQiIGNvbG91cj0iODQzIj4KICAgIDxibG9jayB0eXBlPSJlaGltcG9ydCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJlaHRvdWNoIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImVoaW5wdXQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhvdXRwdXQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhsaWdodHMiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhhbmFsb2ciPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhtb3RvciI+PC9ibG9jaz4KICA8L2NhdGVnb3J5PgogIDxjYXRlZ29yeSBuYW1lPSJCbGlua3QhIiBjb2xvdXI9IjkwIj4KICAgIDxibG9jayB0eXBlPSJibGlua3RpbXBvcnQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iYmxpbmt0c2V0cGl4ZWwiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iYmxpbmt0c2hvdyI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJibGlua3RzZXRicmlnaHRuZXNzIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImJsaW5rdHNldGFsbCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJibGlua3RzZXRhbGxicmlnaHQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iYmxpbmt0Y2xlYXIiPjwvYmxvY2s+IAogIDwvY2F0ZWdvcnk+CjwvY2F0ZWdvcnk+","base64");
-var definitions_6 = require("./advanced/definitions");
-var generators_6 = require("./advanced/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlNvbmljIFBpIiBjb2xvdXI9IjE4MCI+CiAgPGJsb2NrIHR5cGU9ImltcG9ydF9zb25pYyI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ic2FtcGxlc29uIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJwbGF5Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJzbGVlcDEiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImxpdmVsb29wIj48L2Jsb2NrPgo8L2NhdGVnb3J5Pg==","base64");
+var definitions_6 = require("./pimoroni/definitions");
+var generators_6 = require("./pimoroni/generators");
 definitions_6.default(Blockly.Blocks);
 generators_6.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkFkdmFuY2VkIiBjb2xvdXI9IjcwIj4KICA8Y2F0ZWdvcnkgbmFtZT0iSHR0cCBDbGllbnQiIGNvbG91cj0iNzAiPgogICAgPGJsb2NrIHR5cGU9Imh0dHBfY2xpZW50X2ltcG9ydF9yZXN0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Imh0dHBzX2NsaWVudF9jcmVhdGVfY29ubmVjdGlvbiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJodHRwX2NsaWVudF9jcmVhdGVfY29ubmVjdGlvbiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJodHRwX2NsaWVudF9yZXF1ZXN0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Imh0dHBfY2xpZW50X3Jlc3BvbmNlIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImlubGluZV9wcmludCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJodHRwX2NsaWVudF9zdGF0dXMiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iaHR0cF9jbGllbnRfcmVhc29uIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Imh0dHBfY2xpZW50X3JlYWQiPjwvYmxvY2s+CiAgPC9jYXRlZ29yeT4KPC9jYXRlZ29yeT4=","base64");
-var definitions_7 = require("./bitio/definitions");
-var generators_7 = require("./bitio/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlBpbW9yb25pIiBjb2xvdXI9Ijg0MyI+IAogIDxjYXRlZ29yeSBuYW1lPSJFeHBsb3JlciBIYXQiIGNvbG91cj0iODQzIj4KICAgIDxibG9jayB0eXBlPSJlaGltcG9ydCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJlaHRvdWNoIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImVoaW5wdXQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhvdXRwdXQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhsaWdodHMiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhhbmFsb2ciPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZWhtb3RvciI+PC9ibG9jaz4KICA8L2NhdGVnb3J5PgogIDxjYXRlZ29yeSBuYW1lPSJCbGlua3QhIiBjb2xvdXI9IjkwIj4KICAgIDxibG9jayB0eXBlPSJibGlua3RpbXBvcnQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iYmxpbmt0c2V0cGl4ZWwiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iYmxpbmt0c2hvdyI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJibGlua3RzZXRicmlnaHRuZXNzIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImJsaW5rdHNldGFsbCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJibGlua3RzZXRhbGxicmlnaHQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iYmxpbmt0Y2xlYXIiPjwvYmxvY2s+IAogIDwvY2F0ZWdvcnk+CjwvY2F0ZWdvcnk+","base64");
+var definitions_7 = require("./advanced/definitions");
+var generators_7 = require("./advanced/generators");
 definitions_7.default(Blockly.Blocks);
 generators_7.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkJpdElPIiBjb2xvdXI9IjI5MCI+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0bWIiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZGlzcGxheXNjcm9sbHRleHQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZGlzcGxheXNjcm9sbHZhciI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJtaWNyb3NsZWVwIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImRpc3BsYXlzaG93Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImRpc3BsYXljbGVhciI+PC9ibG9jaz4KPC9jYXRlZ29yeT4gIA==","base64");
-var definitions_8 = require("./turtle/definitions");
-var generators_8 = require("./turtle/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkFkdmFuY2VkIiBjb2xvdXI9IjcwIj4KICA8Y2F0ZWdvcnkgbmFtZT0iSHR0cCBDbGllbnQiIGNvbG91cj0iNzAiPgogICAgPGJsb2NrIHR5cGU9Imh0dHBfY2xpZW50X2ltcG9ydF9yZXN0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Imh0dHBzX2NsaWVudF9jcmVhdGVfY29ubmVjdGlvbiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJodHRwX2NsaWVudF9jcmVhdGVfY29ubmVjdGlvbiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJodHRwX2NsaWVudF9yZXF1ZXN0Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Imh0dHBfY2xpZW50X3Jlc3BvbmNlIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImlubGluZV9wcmludCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJodHRwX2NsaWVudF9zdGF0dXMiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iaHR0cF9jbGllbnRfcmVhc29uIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9Imh0dHBfY2xpZW50X3JlYWQiPjwvYmxvY2s+CiAgPC9jYXRlZ29yeT4KPC9jYXRlZ29yeT4=","base64");
+var definitions_8 = require("./bitio/definitions");
+var generators_8 = require("./bitio/generators");
 definitions_8.default(Blockly.Blocks);
 generators_8.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlR1cnRsZSIgY29sb3VyPSIyNDAiPgogICAgPGJsb2NrIHR5cGU9ImltcG9ydF90dXJ0bGUiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0idHVydGxlIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9InNjcmVlbmluaXQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iY29sb3VybW9kZSI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJiYWNrZ3JvdW5kIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImRpcmVjdGlvbnMiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iY29sb3VyIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImNvbG91cnBlbiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJwZW51ZCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJwZW53aWR0aCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJjaXJjbGUiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZ290byI+PC9ibG9jaz4KPC9jYXRlZ29yeT4gIA==","base64");
-var definitions_9 = require("./sensehat/definitions");
-var generators_9 = require("./sensehat/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkJpdElPIiBjb2xvdXI9IjI5MCI+CiAgICA8YmxvY2sgdHlwZT0iaW1wb3J0bWIiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZGlzcGxheXNjcm9sbHRleHQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZGlzcGxheXNjcm9sbHZhciI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJtaWNyb3NsZWVwIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImRpc3BsYXlzaG93Ij48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImRpc3BsYXljbGVhciI+PC9ibG9jaz4KPC9jYXRlZ29yeT4gIA==","base64");
+var definitions_9 = require("./turtle/definitions");
+var generators_9 = require("./turtle/generators");
 definitions_9.default(Blockly.Blocks);
 generators_9.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlNlbnNlIEhhdCIgY29sb3VyPSIyMCI+CiAgPGJsb2NrIHR5cGU9InNlbnNlaW1wb3J0Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJzZW5zZWltcG9ydGVtdSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ic2Vuc2Vpbml0Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJzZW5zZXNob3ciPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InNlbnNlc2hvd3ZhciI+PC9ibG9jaz4KPC9jYXRlZ29yeT4=","base64");
-var definitions_10 = require("./crickit/definitions");
-var generators_10 = require("./crickit/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlR1cnRsZSIgY29sb3VyPSIyNDAiPgogICAgPGJsb2NrIHR5cGU9ImltcG9ydF90dXJ0bGUiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0idHVydGxlIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9InNjcmVlbmluaXQiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iY29sb3VybW9kZSI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJiYWNrZ3JvdW5kIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImRpcmVjdGlvbnMiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iY29sb3VyIj48L2Jsb2NrPgogICAgPGJsb2NrIHR5cGU9ImNvbG91cnBlbiI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJwZW51ZCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJwZW53aWR0aCI+PC9ibG9jaz4KICAgIDxibG9jayB0eXBlPSJjaXJjbGUiPjwvYmxvY2s+CiAgICA8YmxvY2sgdHlwZT0iZ290byI+PC9ibG9jaz4KPC9jYXRlZ29yeT4gIA==","base64");
+var definitions_10 = require("./sensehat/definitions");
+var generators_10 = require("./sensehat/generators");
 definitions_10.default(Blockly.Blocks);
 generators_10.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkNyaWNraXQiIGNvbG91cj0iMTM1Ij4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdGltcG9ydCI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdGluaXQiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImNyaWNraXRzaG93Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJjcmlja2l0c2hvd3ZhciI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9kMSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9zMSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9tMSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9tMiI+PC9ibG9jaz4KPC9jYXRlZ29yeT4K","base64");
-var definitions_11 = require("./smartrover/definitions");
-var generators_11 = require("./smartrover/generators");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlNlbnNlIEhhdCIgY29sb3VyPSIyMCI+CiAgPGJsb2NrIHR5cGU9InNlbnNlaW1wb3J0Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJzZW5zZWltcG9ydGVtdSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ic2Vuc2Vpbml0Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJzZW5zZXNob3ciPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InNlbnNlc2hvd3ZhciI+PC9ibG9jaz4KPC9jYXRlZ29yeT4=","base64");
+var definitions_11 = require("./crickit/definitions");
+var generators_11 = require("./crickit/generators");
 definitions_11.default(Blockly.Blocks);
 generators_11.default(Blockly.Python);
-toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IlNtYXJ0Um92ZXIiIGNvbG91cj0iMTY1Ij4KICA8YmxvY2sgdHlwZT0iZW5hYmxlIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJhcnJvdzFfb24iPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImFycm93MV9vZmYiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImFycm93Ml9vbiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iYXJyb3cyX29mZiI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iYXJyb3czX29uIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJhcnJvdzNfb2ZmIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJhcnJvdzRfb24iPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImFycm93NF9vZmYiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9InNvbmljQ2hlY2siPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImxzMUNoZWNrIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJsczJDaGVjayI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ibTFGb3J3YXJkeCI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ibTFSZXZlcnNleCI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ibTFTdG9wIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJtMkZvcndhcmR4Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJtMlJldmVyc2V4Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJtMlN0b3AiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImJvdGhfb25XaGl0ZUxpbmUiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImxzMV9vbkJsYWNrTGluZSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0ibHMyX29uQmxhY2tMaW5lIj48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJ0cnkiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImV4Y2VwdCI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iR1BJTyBjbGVhbnVwIj48L2Jsb2NrPgo8L2NhdGVnb3J5PgoK","base64");
+toolBoxXml += Buffer("PGNhdGVnb3J5IG5hbWU9IkNyaWNraXQiIGNvbG91cj0iMTM1Ij4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdGltcG9ydCI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdGluaXQiPjwvYmxvY2s+CiAgPGJsb2NrIHR5cGU9ImNyaWNraXRzaG93Ij48L2Jsb2NrPgogIDxibG9jayB0eXBlPSJjcmlja2l0c2hvd3ZhciI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9kMSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9zMSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9tMSI+PC9ibG9jaz4KICA8YmxvY2sgdHlwZT0iY3JpY2tpdF9tMiI+PC9ibG9jaz4KPC9jYXRlZ29yeT4K","base64");
 toolBoxXml += '</xml>';
 function getToolBoxXml() {
     return toolBoxXml;
@@ -2565,7 +3001,7 @@ function getToolBoxXml() {
 exports.getToolBoxXml = getToolBoxXml;
 
 }).call(this,require("buffer").Buffer)
-},{"./advanced/definitions":2,"./advanced/generators":3,"./basic/definitions":4,"./basic/generators":5,"./bitio/definitions":6,"./bitio/generators":7,"./crickit/definitions":8,"./crickit/generators":9,"./gpiozero/definitions":10,"./gpiozero/generators":11,"./minecraft/definitions":13,"./minecraft/generators":14,"./pimoroni/definitions":15,"./pimoroni/generators":16,"./sensehat/definitions":17,"./sensehat/generators":18,"./smartrover/definitions":19,"./smartrover/generators":20,"./sonicpi/definitions":21,"./sonicpi/generators":22,"./turtle/definitions":23,"./turtle/generators":24,"buffer":38,"path":57}],13:[function(require,module,exports){
+},{"./advanced/definitions":2,"./advanced/generators":3,"./basic/definitions":4,"./basic/generators":5,"./bitio/definitions":6,"./bitio/generators":7,"./crickit/definitions":8,"./crickit/generators":9,"./edison/definitions":10,"./edison/generators":11,"./gpiozero/definitions":12,"./gpiozero/generators":13,"./minecraft/definitions":15,"./minecraft/generators":16,"./pimoroni/definitions":17,"./pimoroni/generators":18,"./sensehat/definitions":19,"./sensehat/generators":20,"./sonicpi/definitions":21,"./sonicpi/generators":22,"./turtle/definitions":23,"./turtle/generators":24,"buffer":38,"path":57}],15:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Blocks) {
@@ -3082,7 +3518,7 @@ function define(Blocks) {
 }
 exports.default = define;
 
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Python) {
@@ -3330,7 +3766,7 @@ function define(Python) {
 }
 exports.default = define;
 
-},{}],15:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Blocks) {
@@ -3544,7 +3980,7 @@ function define(Blocks) {
 }
 exports.default = define;
 
-},{}],16:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Python) {
@@ -3652,7 +4088,7 @@ function define(Python) {
 }
 exports.default = define;
 
-},{}],17:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Blocks) {
@@ -3718,7 +4154,7 @@ function define(Blocks) {
 }
 exports.default = define;
 
-},{}],18:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function define(Python) {
@@ -3747,442 +4183,6 @@ function define(Python) {
     Python['senseimportemu'] = function (block) {
         // TODO: Assemble Python into code variable.
         var code = 'from sense_emu import SenseHat\n';
-        return code;
-    };
-}
-exports.default = define;
-
-},{}],19:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function define(Blocks) {
-    Blockly.Blocks['enable'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Begin SmartRover\n');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Enable MotorShield with this block at the start');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow1_on'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(1).on()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 1 on');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow1_off'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(1).off()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 1 off');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow2_on'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(2).on()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 2 on');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow2_off'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(2).off()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 2 off');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow3_on'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(3).on()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 3 on');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow3_off'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(3).off()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 3 off');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow4_on'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(4).on()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 4 on');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['arrow4_off'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Arrow(4).off()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Sets Arrow 4 off');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['sonicCheck'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Check Ultrasonic Sensor');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Check Ultrasonic Sensor');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['ls1Check'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Check Line Sensor 1');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Check IR1 Line Sensor');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['ls2Check'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Check Line Sensor 2');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Check IR2 Line Sensor');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['m1Forwardx'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('m1.forward(')
-                .appendField(new Blockly.FieldTextInput('60'), 'm1ForwardSpeed')
-                .appendField(')');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Set forward speed for motor 1');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['m1Reversex'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('m1.reverse(')
-                .appendField(new Blockly.FieldTextInput('50'), 'm1ReverseSpeed')
-                .appendField(')');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Set reverse speed for motor 1');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['m1Stop'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Motor1 Stop');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Motor1 Stop');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['m2Forwardx'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('m2.forward(')
-                .appendField(new Blockly.FieldTextInput('60'), 'm2ForwardSpeed')
-                .appendField(')');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Set forward speed for motor 2');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['m2Reversex'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('m2.reverse(')
-                .appendField(new Blockly.FieldTextInput('50'), 'm2ReverseSpeed')
-                .appendField(')');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Set reverse speed for motor 2');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['m2Stop'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('Motor2 Stop');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Motor2 Stop');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['both_onWhiteLine'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('if')
-                .appendField(new Blockly.FieldTextInput('ls1.Triggered == False and ls2.Triggered == False'), 'var')
-                .appendField(':');
-            this.appendStatementInput('DO')
-                .appendField('');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('If Statement.');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['ls1_onBlackLine'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('elif')
-                .appendField(new Blockly.FieldTextInput('ls1.Triggered == True and ls2.Triggered == False'), 'var')
-                .appendField(':');
-            this.appendStatementInput('DO')
-                .appendField('');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Elif Statement.');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['ls2_onBlackLine'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('elif')
-                .appendField(new Blockly.FieldTextInput('ls1.Triggered == False and ls2.Triggered == True'), 'var')
-                .appendField(':');
-            this.appendStatementInput('DO')
-                .appendField('');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(165);
-            this.setTooltip('Elif Statement.');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['try'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('try:');
-            this.appendStatementInput('DO')
-                .appendField('');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(336);
-            this.setTooltip('try loop.');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['except'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('except KeyboardInterrupt:');
-            this.appendStatementInput('DO')
-                .appendField('');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(336);
-            this.setTooltip('except Keyboard interrupt');
-            this.setHelpUrl('');
-        },
-    };
-    Blockly.Blocks['GPIO cleanup'] = {
-        init: function () {
-            this.appendDummyInput()
-                .appendField('GPIO.cleanup()');
-            this.setPreviousStatement(true, null);
-            this.setNextStatement(true, null);
-            this.setColour(336);
-            this.setTooltip('GPIO Cleanup');
-            this.setHelpUrl('');
-        },
-    };
-}
-exports.default = define;
-
-},{}],20:[function(require,module,exports){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-function define(Python) {
-    Python['enable'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var mpath = 'import sys\n' + 'sys.path.append("/home/pi/MotorShield")\n';
-        var aimport = 'from PiMotor import Arrow\n';
-        var simport = 'from PiMotor import Sensor\n';
-        var mimport = 'from PiMotor import Motor\n';
-        var m1obj = 'm1 = Motor("MOTOR1",1)\n';
-        var m2obj = 'm2 = Motor("MOTOR2",1)\n';
-        var m3obj = 'm3 = Motor("MOTOR3",1)\n';
-        var m4obj = 'm4 = Motor("MOTOR4",1)\n';
-        var usobj = 'us = Sensor("ULTRASONIC", 10)\n';
-        var ir1obj = 'ls1 = Sensor("IR1", 0)\n';
-        var ir2obj = 'ls2 = Sensor("IR2", 0)\n';
-        var code = mpath + aimport + simport + mimport + m1obj + m2obj + m3obj + m4obj + usobj + ir1obj + ir2obj;
-        return code;
-    };
-    Python['arrow1_on'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(1).on()\n';
-        return code;
-    };
-    Python['arrow1_off'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(1).off()\n';
-        return code;
-    };
-    Python['arrow2_on'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(2).on()\n';
-        return code;
-    };
-    Python['arrow2_off'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(2).off()\n';
-        return code;
-    };
-    Python['arrow3_on'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(3).on()\n';
-        return code;
-    };
-    Python['arrow3_off'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(3).off()\n';
-        return code;
-    };
-    Python['arrow4_on'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(4).on()\n';
-        return code;
-    };
-    Python['arrow4_off'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'Arrow(4).off()\n';
-        return code;
-    };
-    Python['sonicCheck'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'us.sonicCheck()\n';
-        return code;
-    };
-    Python['ls1Check'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'ls1.iRCheck()\n';
-        return code;
-    };
-    Python['ls2Check'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'ls2.iRCheck()\n';
-        return code;
-    };
-    Python['m1Forwardx'] = function (block) {
-        var text_m1ForwardSpeed = block.getFieldValue('m1ForwardSpeed');
-        var code = 'm1.forward(' + text_m1ForwardSpeed + ')\n';
-        return code;
-    };
-    Python['m1Reversex'] = function (block) {
-        var text_m1ReverseSpeed = block.getFieldValue('m1ReverseSpeed');
-        var code = 'm1.reverse(' + text_m1ReverseSpeed + ')\n';
-        return code;
-    };
-    Python['m1Stop'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'm1.stop()\n';
-        return code;
-    };
-    Python['m2Forwardx'] = function (block) {
-        var text_m2ForwardSpeed = block.getFieldValue('m2ForwardSpeed');
-        var code = 'm2.forward(' + text_m2ForwardSpeed + ')\n';
-        return code;
-    };
-    Python['m2Reversex'] = function (block) {
-        var text_m2ReverseSpeed = block.getFieldValue('m2ReverseSpeed');
-        var code = 'm2.reverse(' + text_m2ReverseSpeed + ')\n';
-        return code;
-    };
-    Python['m2Stop'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'm2.stop()\n';
-        return code;
-    };
-    Python['both_onWhiteLine'] = function (block) {
-        var text_const = block.getFieldValue('var');
-        var branch = Blockly.Python.statementToCode(block, 'DO');
-        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
-        return 'if ' + text_const + ':\n' + branch;
-    };
-    Python['ls1_onBlackLine'] = function (block) {
-        var text_const = block.getFieldValue('var');
-        var branch = Blockly.Python.statementToCode(block, 'DO');
-        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
-        return 'elif ' + text_const + ':\n' + branch;
-    };
-    Python['ls2_onBlackLine'] = function (block) {
-        var text_const = block.getFieldValue('var');
-        var branch = Blockly.Python.statementToCode(block, 'DO');
-        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
-        return 'elif ' + text_const + ':\n' + branch;
-    };
-    Python['try'] = function (block) {
-        var branch = Blockly.Python.statementToCode(block, 'DO');
-        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
-        return 'try:\n' + branch;
-    };
-    Python['except'] = function (block) {
-        var branch = Blockly.Python.statementToCode(block, 'DO');
-        branch = Blockly.Python.addLoopTrap(branch, block.id) || Blockly.Python.PASS;
-        return 'except KeyboardInterrupt:\n' + branch;
-    };
-    Python['GPIO cleanup'] = function (block) {
-        // TODO: Assemble Python into code variable.
-        var code = 'GPIO.cleanup()\n';
         return code;
     };
 }
@@ -5023,7 +5023,7 @@ var BlocklyView = (function (_super) {
 }(preact_1.Component));
 exports.default = BlocklyView;
 
-},{"../blocks":12,"preact":59}],31:[function(require,module,exports){
+},{"../blocks":14,"preact":59}],31:[function(require,module,exports){
 "use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
